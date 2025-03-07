@@ -1,0 +1,193 @@
+.paper-submission {
+    background: linear-gradient(135deg, #f5f7fa, #e0e5ec);
+    padding: 80px 20px;
+    text-align: left;
+    width: 100%; /* Full width */
+    margin: 0; /* Remove default margin */
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.paper-submission:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.paper-submission h2 {
+    font-size: 2.8em;
+    color: #002244; /* Solid color instead of gradient */
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.4s ease-in-out;
+}
+
+.paper-submission h2:hover {
+    letter-spacing: 4px;
+}
+
+.paper-submission h3 {
+    font-size: 2em;
+    color: #003b80;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.paper-submission h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(135deg, #BE2633, #243658);
+    border-radius: 2px;
+    transition: width 0.4s ease-in-out;
+}
+
+.paper-submission h3:hover::after {
+    width: 100px;
+    
+}
+
+.paper-submission p {
+    font-size: 1.1em;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    transition: color 0.4s ease-in-out;
+}
+
+.paper-submission p:hover {
+    color: #222;
+}
+
+.paper-submission ul {
+    list-style: none;
+    margin-left: 0;
+    margin-bottom: 40px;
+}
+
+.paper-submission ul li {
+    font-size: 1.1em;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+}
+
+.paper-submission ul li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: #BE2633;
+    font-size: 1.5em;
+    line-height: 1.4;
+    transition: color 0.4s ease-in-out;
+}
+
+.paper-submission ul li:hover {
+    transform: translateX(10px);
+    color: #BE2633;
+}
+
+.paper-submission ul li:hover::before {
+    color: #243658;
+}
+
+.paper-submission table {
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.paper-submission table:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.paper-submission table th,
+.paper-submission table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.paper-submission table th {
+    background-color: #003b80;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.paper-submission table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.paper-submission table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .paper-submission {
+        padding: 60px 20px;
+    }
+
+    .paper-submission h2 {
+        font-size: 2.2em;
+    }
+
+    .paper-submission h3 {
+        font-size: 1.8em;
+    }
+
+    .paper-submission p {
+        font-size: 1em;
+    }
+
+    .paper-submission ul li {
+        font-size: 1em;
+    }
+
+    .paper-submission table {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .paper-submission h2 {
+        font-size: 1.8em;
+    }
+
+    .paper-submission h3 {
+        font-size: 1.5em;
+    }
+
+    .paper-submission p {
+        font-size: 0.9em;
+    }
+
+    .paper-submission ul li {
+        font-size: 0.9em;
+    }
+
+    .paper-submission table {
+        font-size: 0.8em;
+    }
+}

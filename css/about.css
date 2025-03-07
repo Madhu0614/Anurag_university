@@ -1,0 +1,233 @@
+/* About Us Page Specific Styles */
+
+.about {
+    background: linear-gradient(135deg, #f5f7fa, #e0e5ec);
+    padding: 150px 20px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    width: 100vw; /* Full viewport width */
+    margin-left: -50vw; /* Offset to center the content */
+    left: 50%; /* Center the section */
+    transition: all 0.5s ease-in-out;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(190, 38, 51, 0.08), rgba(36, 54, 88, 0.08));
+    z-index: 0;
+    animation: gradient-shift 15s infinite alternate;
+}
+
+@keyframes gradient-shift {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(50px);
+    }
+}
+
+.about h1 {
+    font-size: 5em;
+    color: #002244;
+    margin-bottom: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(135deg, #BE2633, #243658);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.4s ease-in-out;
+    z-index: 1;
+}
+
+.about h1::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 6px;
+    background: linear-gradient(135deg, #BE2633, #243658);
+    border-radius: 4px;
+    transition: width 0.4s ease-in-out;
+}
+
+.about h1:hover::after {
+    width: 300px;
+}
+
+.about h2 {
+    font-size: 4em;
+    color: #003b80;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 20px;
+    background: linear-gradient(135deg, #BE2633, #243658);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.4s ease-in-out;
+    z-index: 1;
+}
+
+.about h2::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 5px;
+    background: linear-gradient(135deg, #BE2633, #243658);
+    border-radius: 4px;
+    transition: width 0.4s ease-in-out;
+}
+
+.about h2:hover::before {
+    width: 250px;
+}
+
+.about p {
+    font-size: 1.4em;
+    color: #444;
+    line-height: 2.2;
+    margin-bottom: 40px;
+    text-align: justify;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: color 0.4s ease-in-out;
+    z-index: 1;
+}
+
+.about p:hover {
+    color: #222;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    display: block;
+    margin: 70px auto;
+    border-radius: 40px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    z-index: 1;
+}
+
+.about-image:hover {
+    transform: scale(1.06) rotate(1deg);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+}
+
+.about ul {
+    list-style: none;
+    text-align: left;
+    display: inline-block;
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 70px;
+    padding-left: 0;
+    max-width: 800px;
+    width: 100%;
+    z-index: 1;
+}
+
+.about ul li {
+    margin-bottom: 40px;
+    padding-left: 50px;
+    line-height: 2;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+}
+
+.about ul li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: #BE2633;
+    font-size: 2.2em;
+    line-height: 1.4;
+    transition: color 0.4s ease-in-out;
+}
+
+.about ul li:hover {
+    transform: translateX(30px);
+    color: #BE2633;
+}
+
+.about ul li:hover::before {
+    color: #243658;
+}
+
+/* 3D Card Effect for Sections */
+.about-section {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 1200px;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.about-section:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about {
+        padding: 120px 20px;
+    }
+
+    .about h1 {
+        font-size: 4em;
+    }
+
+    .about h2 {
+        font-size: 3em;
+    }
+
+    .about p {
+        font-size: 1.2em;
+    }
+
+    .about ul {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 480px) {
+    .about h1 {
+        font-size: 3em;
+    }
+
+    .about h2 {
+        font-size: 2.5em;
+    }
+
+    .about p {
+        font-size: 1em;
+    }
+
+    .about ul {
+        font-size: 1.1em;
+    }
+}

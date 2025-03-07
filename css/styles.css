@@ -1,0 +1,127 @@
+body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    header {
+        background: #fff;
+        padding: 10px 0;
+        border-bottom: 2px solid #ddd;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        transition: color 0.3s ease, background-color 0.3s ease;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    nav ul li a:hover {
+        color: white;
+        background-color: #2b8f40;
+    }
+
+    /* Hero Section */
+    .hero {
+        background: #2b8f40;
+        color: white;
+        text-align: center;
+        padding: 50px 20px;
+        position: relative;
+    }
+
+    .hero h2, .hero h3, .hero h4 {
+        margin: 10px 0;
+    }
+
+    .hero-logo {
+        width: 250px;  /* Increased size for the hero logo */
+        position: absolute;
+        top: 120px;
+        left: 10px;
+        filter: brightness(0) invert(0);
+    }
+
+    .highlight {
+        color: #ffcc00;
+        font-weight: bold;
+    }
+
+    .sponsors img {
+        width: 100px;
+        margin: 10px;
+    }
+
+    /* Body Image Section */
+    .body-image {
+        background-size: cover;
+        background-position: center;
+        height: 400px; /* Adjust height as needed */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center; /* Ensures text is centered horizontally */
+    }
+
+    .body-image h2 {
+        font-size: 2rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    /* Logos Section */
+    .logos {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+        background: white;
+    }
+
+    .logos img {
+        width: 150px;
+    }
+
+    footer {
+        background: #222;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .scroller {
+        overflow: hidden;
+        white-space: nowrap;
+        box-sizing: border-box;
+    }
+
+    .scroller p {
+        display: inline-block;
+        padding-left: 100%;
+        font-size: 30px; /* Increase the font size */
+        animation: scroll 30s linear infinite; /* Adjust the duration here */
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
