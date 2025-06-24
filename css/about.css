@@ -1,196 +1,224 @@
-/* About Us Page Specific Styles */
-
 .about {
-    background: linear-gradient(135deg, #f5f7fa, #e0e5ec);
-    padding: 30px 20px;
-    text-align: center;
-    overflow: hidden;
-    position: relative;
-    width: 100vw; /* Full viewport width */
-    margin-left: -50vw; /* Offset to center the content */
-    left: 50%; /* Center the section */
-    transition: all 0.5s ease-in-out;
+  max-width: 1140px;
+  margin: 3rem auto 4rem;
+  padding: 0 2rem;
+  /* Slight subtle fade-in animation */
+  animation: fadeInUp 0.6s ease forwards;
 }
 
-@keyframes gradient-shift {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(50px);
-    }
-}
-
-.about h1 {
-    font-size: 5em;
-    color: #002244;
-    margin-bottom: 60px;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    position: relative;
-    display: inline-block;
-    background: linear-gradient(135deg, #BE2633, #243658);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 0.4s ease-in-out;
-    z-index: 1;
-}
-
-
-.about h1:hover::after {
-    width: 300px;
-}
-
+/* ====== HEADING STYLES ====== */
 .about h2 {
-    font-size: 4em;
-    color: #003b80;
-    margin-top: 80px;
-    margin-bottom: 60px;
-    font-weight: 700;
-    text-transform: capitalize;
-    letter-spacing: 3px;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 20px;
-    background: linear-gradient(135deg, #BE2633, #243658);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 0.4s ease-in-out;
-    z-index: 1;
+  font-size: 2.8rem; /* Slightly bigger */
+  font-weight: 800;
+  margin-bottom: 1.4rem;
+  padding-bottom: 0.6rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+
+  /* Gradient text with better fallback */
+  background: linear-gradient(135deg, #BE2633, #243658);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.18);
+  transition: text-shadow 0.3s ease;
 }
 
-.about h2:hover::before {
-    width: 250px;
+.about h2:hover {
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
 }
 
+.about h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(135deg, #BE2633, #243658);
+  border-radius: 2px;
+  transition: width 0.4s ease-in-out;
+  will-change: width; /* performance optimization */
+}
+.about h3 {
+  font-size: 2rem; /* Slightly bigger */
+  font-weight: 800;
+  margin-bottom: 1.4rem;
+  padding-bottom: 0.6rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+
+  /* Gradient text with better fallback */
+  background: linear-gradient(135deg, #BE2633, #243658);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.18);
+  transition: text-shadow 0.3s ease;
+}
+
+.about h3:hover::after {
+  width: 100px;
+}
+.about h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(135deg, #BE2633, #243658);
+  border-radius: 2px;
+  transition: width 0.4s ease-in-out;
+  will-change: width; /* performance optimization */
+}
+
+.about h3:hover::after {
+  width: 100px;
+}
+/* ====== PARAGRAPHS ====== */
 .about p {
-    font-size: 1.4em;
-    color: #444;
-    line-height: 2.2;
-    margin-bottom: 40px;
-    text-align: justify;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    transition: color 0.4s ease-in-out;
-    z-index: 1;
+  margin-bottom: 1.8rem;
+  text-align: justify;
+  color: #444444; /* Improved contrast */
+  font-weight: 400;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
 }
 
-.about p:hover {
-    color: #222;
-}
-
-.about-image {
-    width: 100%;
-    max-width: 1100px;
-    height: auto;
-    display: block;
-    margin: 70px auto;
-    border-radius: 40px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-    z-index: 1;
-}
-
-.about-image:hover {
-    transform: scale(1.06) rotate(1deg);
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
-}
-
+/* ====== LISTS ====== */
 .about ul {
-    list-style: none;
-    text-align: left;
-    display: inline-block;
-    font-size: 1.5em;
-    color: #333;
-    margin-top: 70px;
-    padding-left: 0;
-    max-width: 800px;
-    width: 100%;
-    z-index: 1;
+  list-style-type: disc;
+  margin-left: 2.4rem;
+  margin-bottom: 2rem;
+  color: #555;
+  font-size: 1.1rem;
 }
 
-.about ul li {
-    margin-bottom: 40px;
-    padding-left: 50px;
-    line-height: 2;
-    position: relative;
-    transition: all 0.4s ease-in-out;
+.about li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
 }
 
-.about ul li::before {
-    content: '▹';
-    position: absolute;
-    left: 0;
-    color: #BE2633;
-    font-size: 2.2em;
-    line-height: 1.4;
-    transition: color 0.4s ease-in-out;
+/* ====== IMAGES ====== */
+.about-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 2.5rem auto 3.5rem;
+  border-radius: 20px;
+  box-shadow:
+    0 12px 30px var(--shadow-light),
+    0 6px 15px var(--shadow-strong);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
 }
 
-.about ul li:hover {
-    transform: translateX(30px);
-    color: #BE2633;
+
+/* ====== SCHOOL LOGOS SECTION ====== */
+.school-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 3.5rem;
+  padding-bottom: 4.5rem;
 }
 
-.about ul li:hover::before {
-    color: #243658;
+.school-card {
+  position: relative;
+  display: inline-block;
+  width: 300px; 
+  height: 300px;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 8px; 
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* 3D Card Effect for Sections */
-.about-section {
-    background: #fff;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    margin: 40px auto;
-    max-width: 1200px;
-    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+.school-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* keeps image aspect ratio */
+  display: block;
+  transition: transform 0.3s ease;
 }
 
-.about-section:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+.school-card:hover img {
+  transform: scale(1.05);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .about {
-        padding: 120px 20px;
-    }
-
-    .about h1 {
-        font-size: 4em;
-    }
-
-    .about h2 {
-        font-size: 3em;
-    }
-
-    .about p {
-        font-size: 1.2em;
-    }
-
-    .about ul {
-        font-size: 1.3em;
-    }
+.overlay-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 12px 10px;
+  background: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+  color: white;
+  font-size: 1.3rem; /* big text */
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  user-select: none;
 }
 
-@media (max-width: 480px) {
-    .about h1 {
-        font-size: 3em;
-    }
 
-    .about h2 {
-        font-size: 2.5em;
-    }
+/* ====== RESPONSIVE DESIGN ====== */
+@media (max-width: 992px) {
+  .about {
+    padding: 0 1.5rem 3rem;
+  }
+  .school-card {
+    max-width: 220px;
+    padding: 1.8rem 1.5rem 2.5rem;
+  }
+}
 
-    .about p {
-        font-size: 1em;
-    }
+@media (max-width: 600px) {
+  .about h2 {
+    font-size: 2.2rem;
+  }
+  .about {
+    padding: 0 1rem 2.5rem;
+  }
+  .school-logos {
+    gap: 2rem;
+  }
+  .school-card {
+    max-width: 100%;
+    padding: 1.5rem 1rem 2rem;
+  }
+  .school-card img {
+    max-width: 90px;
+  }
+  .logo-caption {
+    font-size: 1.1rem;
+    padding: 6px 10px;
+  }
+}
 
-    .about ul {
-        font-size: 1.1em;
-    }
+/* ====== KEYFRAME ANIMATION ====== */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

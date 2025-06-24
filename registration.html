@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration - ICREGCSD 2025</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/registration.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
     <header>
@@ -34,37 +38,65 @@
         </div>
     </section>
     
-    <section class="registration">
-        <h2>ICREGCSD 2025 Registration</h2>
-        <p>Fill in the form below to register for the conference.</p>
-        <form action="register.php" method="post">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="affiliation">Affiliation:</label>
-            <input type="text" id="affiliation" name="affiliation" required>
-            
-            <label for="category">Category:</label>
-            <select id="category" name="category" required>
-                <option value="student">Student</option>
-                <option value="faculty">Faculty</option>
-                <option value="researcher">Researcher</option>
-                <option value="industry">Industry Professional</option>
-            </select>
-            
-            <label for="paper-id">Paper ID (if applicable):</label>
-            <input type="text" id="paper-id" name="paper_id">
-            
-            <label for="payment">Payment Reference ID:</label>
-            <input type="text" id="payment" name="payment" required>
-            
-            <button type="submit">Submit Registration</button>
-        </form>
-    </section>
-    
+ <section class="registration">
+    <h2>REGISTRATION FORM</h2>
+    <p><strong>Next Generation Power Electronics for Grid Modernization and Electric Mobility<br>
+    (Online Mode)</strong></p>
+    <p><strong>17th June – 21st June 2025</strong></p>
+
+    <form action="register.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="" disabled selected>Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+
+        <label for="department">Department:</label>
+        <input type="text" id="department" name="department" required>
+
+        <label for="institution">Institution:</label>
+        <input type="text" id="institution" name="institution" required>
+
+        <label for="address">Address for Communication:</label>
+        <textarea id="address" name="address" rows="4" required></textarea>
+
+        <label for="pincode">Pin Code:</label>
+        <input type="text" id="pincode" name="pincode" required>
+
+        <label for="phone">Phone No.:</label>
+        <input type="text" id="phone" name="phone">
+
+        <label for="mobile">Mobile:</label>
+        <input type="text" id="mobile" name="mobile" required>
+
+        <label for="email">E-mail ID:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="declaration">
+            Declaration:<br>
+            <em>The given information is true to the best of my knowledge. I agree to abide by the rules and regulations governing the program.</em>
+        </label>
+
+        <p style="margin-top:20px;">Signature of the Participant: ___________________________<br>
+        Signature of HOD/Head of the Institution: ___________________________</p>
+
+        <button type="submit">Submit Registration</button>
+    </form>
+
+    <p><strong>Registration Link:</strong><br>
+    <a href="https://forms.gle/iwY6AsQCvxUwLjzV6" target="_blank">Click here</a></p>
+
+    <p><strong>*Certificate:</strong> e-certificate will be given to all the participants who attend all days.</p>
+
+    <p><strong>CONTACT:</strong><br>
+    Mr. P. Manohar : 9676422012<br>
+    Mr. G. Srikar : 7032518223</p>
+</section>
+
     <footer>
         <p>&copy; 2025 Anurag University. All Rights Reserved.</p>
     </footer>
