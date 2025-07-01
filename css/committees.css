@@ -1,137 +1,128 @@
 .committee {
-  padding: 80px 30px;
-  max-width: 1400px;
-  margin: 0 auto 60px;
-  text-align: center;
+  padding: 80px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left; /* keep this left */
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background-color: #f9fafc;
+  color: #1e1e1e;
+
 }
 
 .committee h2 {
-  font-size: 3.5rem;
-  color: #222;
-  margin-bottom: 2.5rem;
-  font-weight: 800;
-  letter-spacing: 3px;
+  font-size: 3.2rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
   text-transform: uppercase;
   background: linear-gradient(135deg, #BE2633, #243658);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 0.5rem;
+  text-align: center;  
+  margin-left: auto;
+  margin-right: auto;
+  max-width: fit-content;
+  display: block;
+}
+
+.committee h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 140px;
+  height: 5px;
+  background: linear-gradient(135deg, #BE2633, #243658);
+  border-radius: 4px;
+  transform: translateX(-50%);
+  box-shadow: 0 3px 8px rgba(190, 38, 51, 0.6);
 }
 
 .committee h3 {
-  font-size: 2rem;
-  color: #444;
-  margin-top: 4rem;
-  margin-bottom: 1.8rem;
+  font-size: 1.85rem;
   font-weight: 700;
+  margin-top: 3.5rem;
+  margin-bottom: 1rem;
   position: relative;
   display: inline-block;
   padding-bottom: 12px;
+  color: #243658;
 }
 
 .committee h3::after {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 50%;
-  width: 70%;
+  left: 0;
+  width: 90px;
   height: 4px;
-  background: linear-gradient(135deg, #BE2633, #243658);
-  transform: translateX(-50%);
-  border-radius: 2px;
+  background: #be2633;
+  border-radius: 3px;
+  box-shadow: 0 1px 6px rgba(190, 38, 51, 0.5);
 }
 
 .committee-members {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2.5rem;
-  margin-top: 2rem;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 1.5rem;
 }
 
 .committee-member {
-  width: 280px;
-  background-color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-  overflow: hidden;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border-left: 6px solid #be2633;
+  border-radius: 14px;
+  padding: 22px 28px;
+  box-shadow: 0 14px 25px rgba(0, 0, 0, 0.09);
+  transition: all 0.35s ease;
+  cursor: default;
 }
 
 .committee-member:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 28px rgba(0, 0, 0, 0.2);
-}
-
-.committee-member img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 16px 16px 0 0;
-  display: block;
-  transition: filter 0.3s ease;
-}
-
-.committee-member:hover img {
-  filter: brightness(0.85);
+  transform: translateY(-6px);
+  box-shadow: 0 22px 35px rgba(0, 0, 0, 0.15);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .committee-member p {
-  margin: 15px 20px 30px;
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.65;
   color: #222;
-  font-weight: 600;
-  font-size: 1.05rem;
-  line-height: 1.4;
-  text-align: center;
 }
 
-.no-image {
-  width: 280px;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-  padding: 30px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  cursor: default;
-  margin-bottom: 2.5rem;
+.committee-member p span {
+  font-weight: 700;
+  color: #BE2633;
 }
-
-.no-image p {
-  margin: 8px 0;
-  font-weight: 600;
-  color: #444;
-  font-size: 1rem;
-}
-
-.no-image .committee-member {
-  box-shadow: none;
-  padding: 15px;
-  cursor: default;
-}
-
-.no-image .committee-member p {
-  margin: 10px 0;
-  font-size: 1rem;
-  color: #333;
-}
-
 
 /* Responsive */
 @media (max-width: 768px) {
-  .committee-members {
-    gap: 1.8rem;
+  .committee {
+    padding: 48px 16px;
   }
 
-  .committee-member,
-  .no-image {
-    width: 100%;
-    max-width: 320px;
+  .committee h2 {
+    font-size: 2.4rem;
+  }
+
+  .committee h3 {
+    font-size: 1.5rem;
+  }
+
+  .committee-members {
+    gap: 14px;
+  }
+
+  .committee-member {
+    padding: 18px 22px;
+  }
+
+  .committee-member p {
+    font-size: 1rem;
   }
 }
