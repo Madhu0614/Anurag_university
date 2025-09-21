@@ -1,4 +1,4 @@
-/* General Body Styles */
+/* ====== GENERAL BODY STYLES ====== */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -20,14 +20,16 @@ a:hover {
     color: #004999;
 }
 
-/* Content Section Styles */
+/* ====== CONTENT SECTION STYLES ====== */
 .content {
-    width: 100%; /* Full width */
+    width: 100vw; /* Full viewport width */
     max-width: none; /* Remove max-width constraint */
     background: white;
-    padding: 40px 20px; /* Adjusted padding */
+    padding: 60px 40px; /* Increased padding for full-width */
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     transition: 0.3s ease-in-out;
+    margin: 0; /* Remove margins */
+    box-sizing: border-box;
 }
 
 .content:hover {
@@ -150,8 +152,18 @@ a:hover {
     color: #243658; /* Dark blue color on hover */
 }
 
-/* Responsive Design */
+/* ====== RESPONSIVE DESIGN ====== */
+@media (max-width: 1200px) {
+    .content {
+        padding: 50px 30px;
+    }
+}
+
 @media (max-width: 768px) {
+    .content {
+        padding: 40px 20px;
+    }
+    
     .content h2 {
         font-size: 2em;
     }
@@ -174,6 +186,10 @@ a:hover {
 }
 
 @media (max-width: 480px) {
+    .content {
+        padding: 30px 15px;
+    }
+    
     .content h2 {
         font-size: 1.8em;
     }

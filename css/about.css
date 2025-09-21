@@ -1,9 +1,12 @@
 .about {
-  max-width: 1140px;
-  margin: 3rem auto 4rem;
-  padding: 0 2rem;
+  width: 100vw; /* Full viewport width */
+  max-width: none; /* Remove max-width constraint */
+  margin: 0; /* Remove auto margins */
+  padding: 3rem 4rem 4rem; /* Increase horizontal padding */
+  min-height: 100vh; /* Ensure full screen height */
   /* Slight subtle fade-in animation */
   animation: fadeInUp 0.6s ease forwards;
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 /* ====== HEADING STYLES ====== */
@@ -46,6 +49,7 @@
   transition: width 0.4s ease-in-out;
   will-change: width; /* performance optimization */
 }
+
 .about h3 {
   font-size: 2rem; /* Slightly bigger */
   font-weight: 800;
@@ -72,6 +76,7 @@
 .about h3:hover::after {
   width: 100px;
 }
+
 .about h3::after {
   content: '';
   position: absolute;
@@ -88,6 +93,7 @@
 .about h3:hover::after {
   width: 100px;
 }
+
 /* ====== PARAGRAPHS ====== */
 .about p {
   margin-bottom: 1.8rem;
@@ -97,6 +103,7 @@
   font-size: 1.15rem;
   line-height: 1.7;
   letter-spacing: 0.02em;
+  max-width: 90%; /* Prevent text from stretching too wide */
 }
 
 /* ====== LISTS ====== */
@@ -113,105 +120,53 @@
   line-height: 1.6;
 }
 
-/* ====== IMAGES ====== */
-.about-image {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 2.5rem auto 3.5rem;
-  border-radius: 20px;
-  box-shadow:
-    0 12px 30px var(--shadow-light),
-    0 6px 15px var(--shadow-strong);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-  cursor: pointer;
-}
-
-
-/* ====== SCHOOL LOGOS SECTION ====== */
-.school-logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 3rem;
-  margin-top: 3.5rem;
-  padding-bottom: 4.5rem;
-}
-
-.school-card {
-  position: relative;
-  display: inline-block;
-  width: 300px; 
-  height: 300px;
-  margin: 10px;
-  overflow: hidden;
-  border-radius: 8px; 
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.school-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* keeps image aspect ratio */
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-.school-card:hover img {
-  transform: scale(1.05);
-}
-
-.overlay-text {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 12px 10px;
-  background: rgba(0, 0, 0, 0.6); /* semi-transparent black */
-  color: white;
-  font-size: 1.3rem; /* big text */
-  font-weight: bold;
-  text-align: center;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-  user-select: none;
-}
-
-
 /* ====== RESPONSIVE DESIGN ====== */
+@media (max-width: 1200px) {
+  .about {
+    padding: 3rem 3rem 4rem;
+  }
+  
+  .about p {
+    max-width: 95%;
+  }
+}
+
 @media (max-width: 992px) {
   .about {
-    padding: 0 1.5rem 3rem;
+    padding: 2rem 2rem 3rem;
   }
-  .school-card {
-    max-width: 220px;
-    padding: 1.8rem 1.5rem 2.5rem;
+  
+  .about p {
+    max-width: 100%;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .about h2 {
     font-size: 2.2rem;
   }
+  
   .about {
-    padding: 0 1rem 2.5rem;
-  }
-  .school-logos {
-    gap: 2rem;
-  }
-  .school-card {
-    max-width: 100%;
-    padding: 1.5rem 1rem 2rem;
-  }
-  .school-card img {
-    max-width: 90px;
-  }
-  .logo-caption {
-    font-size: 1.1rem;
-    padding: 6px 10px;
+    padding: 1.5rem 1rem 2.5rem;
   }
 }
 
-/* ====== KEYFRAME ANIMATION ====== */
+@media (max-width: 480px) {
+  .about {
+    padding: 1rem 0.5rem 2rem;
+  }
+  
+  .about h2 {
+    font-size: 1.8rem;
+  }
+  
+  .about p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+/* ====== KEYFRAME ANIMATIONS ====== */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
