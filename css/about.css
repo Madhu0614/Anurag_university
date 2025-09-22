@@ -1,9 +1,10 @@
+/* ====== ABOUT CONTENT SECTIONS ONLY ====== */
 .about {
   width: 100vw; /* Full viewport width */
   max-width: none; /* Remove max-width constraint */
   margin: 0; /* Remove auto margins */
   padding: 3rem 4rem 4rem; /* Increase horizontal padding */
-  min-height: 100vh; /* Ensure full screen height */
+  background: white;
   /* Slight subtle fade-in animation */
   animation: fadeInUp 0.6s ease forwards;
   box-sizing: border-box; /* Include padding in width calculation */
@@ -50,6 +51,10 @@
   will-change: width; /* performance optimization */
 }
 
+.about h2:hover::after {
+  width: 100px;
+}
+
 .about h3 {
   font-size: 2rem; /* Slightly bigger */
   font-weight: 800;
@@ -73,8 +78,8 @@
   transition: text-shadow 0.3s ease;
 }
 
-.about h3:hover::after {
-  width: 100px;
+.about h3:hover {
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .about h3::after {
@@ -120,7 +125,7 @@
   line-height: 1.6;
 }
 
-/* ====== RESPONSIVE DESIGN ====== */
+/* ====== RESPONSIVE DESIGN FOR ABOUT CONTENT ONLY ====== */
 @media (max-width: 1200px) {
   .about {
     padding: 3rem 3rem 4rem;
@@ -142,12 +147,16 @@
 }
 
 @media (max-width: 768px) {
+  .about {
+    padding: 1.5rem 1rem 2.5rem;
+  }
+
   .about h2 {
     font-size: 2.2rem;
   }
-  
-  .about {
-    padding: 1.5rem 1rem 2.5rem;
+
+  .about h3 {
+    font-size: 1.7rem;
   }
 }
 
@@ -158,6 +167,10 @@
   
   .about h2 {
     font-size: 1.8rem;
+  }
+
+  .about h3 {
+    font-size: 1.5rem;
   }
   
   .about p {
